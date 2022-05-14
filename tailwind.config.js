@@ -4,7 +4,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'irodori-primary': '#F2DDB6',
+      },
+    },
   },
   plugins: [],
 };
