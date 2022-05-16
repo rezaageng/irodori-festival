@@ -9,6 +9,7 @@ const Navbar = () => {
   const router = useRouter();
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [mobile, setMobile] = useState(false);
   const ref = useRef(null);
 
   const isMobile = useMediaQuery({ query: '(max-width: 640px)' });
@@ -33,6 +34,11 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    if (isMobile) setMobile(true);
+    else setMobile(false);
+  }, [isMobile]);
+
   // eslint-disable-next-line consistent-return
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -46,7 +52,7 @@ const Navbar = () => {
   return (
     <animated.nav
       ref={ref}
-      style={isMobile ? navAnimatedMobile : navAnimated}
+      style={mobile ? navAnimatedMobile : navAnimated}
       className="bg-irodori-primary fixed left-0 w-full sm:bottom-auto px-6 flex transition ease-in-out duration-500`"
     >
       <div className="hidden sm:flex flex-1">
