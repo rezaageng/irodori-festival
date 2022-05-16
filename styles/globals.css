@@ -5,6 +5,7 @@
 @layer components {
   .nav-wrapper {
     @apply flex
+    gap-2
     place-items-center
     cursor-pointer
     sm:hover:bg-irodori-secondary
