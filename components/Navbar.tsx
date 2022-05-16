@@ -55,7 +55,7 @@ const Navbar = () => {
       style={mobile ? navAnimatedMobile : navAnimated}
       className="bg-irodori-primary fixed left-0 w-full sm:bottom-auto px-6 flex transition ease-in-out duration-500`"
     >
-      <div className="hidden sm:flex flex-1">
+      <div className="hidden sm:flex shrink-0 ">
         <Image
           src="/assets/logos/zephyr.png"
           alt="zephyr"
@@ -64,7 +64,7 @@ const Navbar = () => {
           priority
         />
       </div>
-      <div className="flex gap-4 justify-around sm:justify-end p-2 w-full flex-1">
+      <div className="flex gap-4 justify-around sm:justify-end p-2 w-full">
         <Link href="/" passHref>
           <div className="nav-wrapper">
             <Image
