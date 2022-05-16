@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .nav-wrapper {
+    @apply flex
+    place-items-center
+    cursor-pointer
+    sm:hover:bg-irodori-secondary
+    sm:hover:rounded-full
+    p-2
+    ease-in-out
+    duration-200;
+  }
+}

@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         'irodori-primary': '#F2DDB6',
+        'irodori-secondary': '#F2E6D0',
       },
     },
   },
