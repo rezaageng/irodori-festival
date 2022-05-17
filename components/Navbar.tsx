@@ -53,7 +53,7 @@ const Navbar = () => {
     <animated.nav
       ref={ref}
       style={mobile ? navAnimatedMobile : navAnimated}
-      className="bg-irodori-primary fixed left-0 w-full sm:bottom-auto px-6 flex transition ease-in-out duration-500`"
+      className="bg-irodori-primary fixed left-0 w-full sm:bottom-auto px-6 flex z-10"
     >
       <div className="hidden sm:flex shrink-0 ">
         <Image

@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
+import ParallaxComponent from '../components/ParallaxComponent';
 
-const Home: NextPage = () => <h1>Yahaha</h1>;
+const Home: NextPage = () => <ParallaxComponent />;
 
 export default Home;
