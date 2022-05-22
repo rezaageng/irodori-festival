@@ -26,4 +26,15 @@
     ease-in-out
     duration-200;
   }
+  .nav-wrapper-transparent {
+    @apply flex
+    gap-2
+    place-items-center
+    cursor-pointer
+    sm:hover:bg-irodori-secondary/30
+    sm:hover:rounded-full
+    p-2
+    ease-in-out
+    duration-200;
+  }
 }

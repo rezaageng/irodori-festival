@@ -10,8 +10,8 @@ const Navbar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobile, setMobile] = useState(false);
+  const [transparent, setTransparent] = useState(true);
   const ref = useRef(null);
-
   const isMobile = useMediaQuery({ query: '(max-width: 640px)' });
 
   const navAnimatedMobile = useSpring({
@@ -19,6 +19,7 @@ const Navbar = () => {
     to: { bottom: show ? '0px' : '-100px' },
     immediate: !ref.current,
   });
+
   const navAnimated = useSpring({
     from: { top: show ? '-100px' : '0px', bottom: 'auto' },
     to: { top: show ? '0px' : '-100px' },
@@ -34,6 +35,16 @@ const Navbar = () => {
     }
   };
 
+  const transparentNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > 100) {
+        setTransparent(false);
+      } else setTransparent(true);
+
+      setLastScrollY(window.scrollY);
+    }
+  };
+
   useEffect(() => {
     if (isMobile) setMobile(true);
     else setMobile(false);
@@ -43,17 +54,29 @@ const Navbar = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', controlNavbar);
+      if (router.pathname === '/') {
+        if (window.scrollY === 0) setTransparent(true);
+        window.addEventListener('scroll', transparentNavbar);
+      }
+      if (router.pathname !== '/') setTransparent(false);
 
-      return () => window.removeEventListener('scroll', controlNavbar);
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+        window.removeEventListener('scroll', transparentNavbar);
+      };
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lastScrollY]);
+  }, [lastScrollY, router.pathname]);
 
   return (
     <animated.nav
       ref={ref}
       style={mobile ? navAnimatedMobile : navAnimated}
-      className="bg-irodori-primary fixed left-0 w-full sm:bottom-auto px-6 flex z-10"
+      className={`${
+        transparent && !mobile
+          ? 'transition bg-transparent'
+          : 'transition bg-irodori-primary'
+      } fixed left-0 w-full sm:bottom-auto px-6 flex z-10`}
     >
       <div className="hidden sm:flex shrink-0 ">
         <Image
@@ -66,7 +89,13 @@ const Navbar = () => {
       </div>
       <div className="flex gap-4 justify-around sm:justify-end p-2 w-full">
         <Link href="/" passHref>
-          <div className="nav-wrapper">
+          <div
+            className={`${
+              transparent
+                ? 'sm:hover:bg-irodori-secondary/30'
+                : 'sm:hover:bg-irodori-secondary'
+            } nav-wrapper`}
+          >
             <Image
               src={
                 router.pathname === '/'
@@ -81,7 +110,13 @@ const Navbar = () => {
           </div>
         </Link>
         <Link href="/gallery" passHref>
-          <div className="nav-wrapper">
+          <div
+            className={`${
+              transparent
+                ? 'sm:hover:bg-irodori-secondary/30'
+                : 'sm:hover:bg-irodori-secondary'
+            } nav-wrapper`}
+          >
             <Image
               src={
                 router.pathname === '/gallery'
@@ -96,7 +131,13 @@ const Navbar = () => {
           </div>
         </Link>
         <Link href="/art-sources" passHref>
-          <div className="nav-wrapper">
+          <div
+            className={`${
+              transparent
+                ? 'sm:hover:bg-irodori-secondary/30'
+                : 'sm:hover:bg-irodori-secondary'
+            } nav-wrapper`}
+          >
             <Image
               src={
                 router.pathname === '/art-sources'
