@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@react-spring/parallax': ^9.4.5
   '@react-spring/web': 9.4.5
   '@types/node': 17.0.25
   '@types/react': 18.0.6
@@ -23,17 +22,18 @@ specifiers:
   react: '17'
   react-dom: '17'
   react-responsive: 9.0.0-beta.8
+  react-scroll-parallax: ^3.2.0
   sharp: ^0.30.4
   tailwindcss: ^3.0.24
   typescript: 4.6.3
 
 dependencies:
-  '@react-spring/parallax': 9.4.5_sfoxds7t5ydpegc3knd667wn6m
   '@react-spring/web': 9.4.5_sfoxds7t5ydpegc3knd667wn6m
   next: 12.1.5_sfoxds7t5ydpegc3knd667wn6m
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-responsive: 9.0.0-beta.8_react@17.0.2
+  react-scroll-parallax: 3.2.0_sfoxds7t5ydpegc3knd667wn6m
   sharp: 0.30.4
 
 devDependencies:
@@ -264,18 +264,6 @@ packages:
       '@react-spring/shared': 9.4.5_react@17.0.2
       '@react-spring/types': 9.4.5
       react: 17.0.2
-    dev: false
-
-  /@react-spring/parallax/9.4.5_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-oN677+AFie3rpoD/02m6FXu5RARabztJTs1SywrmeLQlFJtx/gGL9eqSgUWbTtBQ3wV7FDzJ9knjkTwFLW8GPA==}
-    peerDependencies:
-      react: ^16.8.0  || >=17.0.0 || >=18.0.0
-      react-dom: ^16.8.0  || >=17.0.0 || >=18.0.0
-    dependencies:
-      '@react-spring/shared': 9.4.5_react@17.0.2
-      '@react-spring/web': 9.4.5_sfoxds7t5ydpegc3knd667wn6m
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /@react-spring/rafz/9.4.5:
@@ -706,6 +694,10 @@ packages:
 
   /base64-js/1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+    dev: false
+
+  /bezier-easing/2.1.0:
+    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
     dev: false
 
   /binary-extensions/2.2.0:
@@ -2191,6 +2183,13 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /parallax-controller/1.5.0:
+    resolution: {integrity: sha512-X7FKD0bH27hJHdknH/UNEznmw6xjcWz/QA4M6RLlE/gUXfbePKhk+ld/20e58aAfjMqj+Q7RURryISFcDIVmtA==}
+    engines: {node: '>=12'}
+    dependencies:
+      bezier-easing: 2.1.0
+    dev: false
+
   /parent-module/1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -2409,6 +2408,18 @@ packages:
       prop-types: 15.8.1
       react: 17.0.2
       shallow-equal: 1.2.1
+    dev: false
+
+  /react-scroll-parallax/3.2.0_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-jZYFHbO+pE+IbNacHCpBKqw+WhGTA7t5WmXmQzC8i4DGdSYJ25d64R7ZD02K3CwMWdw5uKuc1LUZX/0OA/HCVA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16.8.0-0 || >=17.0.1
+      react-dom: ^16.8.0-0 || >=17.0.1
+    dependencies:
+      parallax-controller: 1.5.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /react/17.0.2:
