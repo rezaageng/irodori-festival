@@ -1,34 +1,35 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 const ParallaxComponent = () => (
-  <Parallax pages={2}>
-    <ParallaxLayer
-      className="bg-[url('/assets/parallax/bg.png')]"
-      style={{ backgroundSize: '100%', aspectRatio: '16/9', height: 'auto' }}
-    />
-    <ParallaxLayer
-      speed={0.5}
-      className="bg-[url('/assets/parallax/board.png')]"
-      style={{ backgroundSize: '100%', aspectRatio: '16/9', height: 'auto' }}
-    />
-    <ParallaxLayer
-      speed={0.8}
-      className="bg-[url('/assets/parallax/branch.png')]"
-      style={{ backgroundSize: '100%', aspectRatio: '16/9', height: 'auto' }}
-    />
-    <ParallaxLayer
-      speed={1}
-      className="bg-[url('/assets/parallax/rock.png')]"
-      style={{ backgroundSize: '100%', aspectRatio: '16/9', height: 'auto' }}
-    />
-    <ParallaxLayer
-      factor={2}
-      offset={1}
-      speed={0}
-      className="bg-irodori-primary"
-      style={{ backgroundSize: '100%', aspectRatio: '16/9', height: 'auto' }}
-    />
-  </Parallax>
+  <ParallaxBanner
+    layers={[
+      {
+        image: '/assets/parallax/bg.png',
+        expanded: false,
+        translateY: ['0%', '100%'],
+        shouldAlwaysCompleteAnimation: true,
+      },
+      {
+        image: '/assets/parallax/board.png',
+        expanded: false,
+        translateY: ['0%', '70%'],
+        shouldAlwaysCompleteAnimation: true,
+      },
+      {
+        image: '/assets/parallax/branch.png',
+        expanded: false,
+        translateY: ['0%', '50%'],
+        shouldAlwaysCompleteAnimation: true,
+      },
+      {
+        image: '/assets/parallax/rock.png',
+        expanded: false,
+        translateY: ['0%', '20%'],
+        shouldAlwaysCompleteAnimation: true,
+      },
+    ]}
+    className="aspect-video"
+  />
 );
 
 export default ParallaxComponent;
