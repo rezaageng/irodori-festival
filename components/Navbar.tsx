@@ -75,7 +75,7 @@ const Navbar = () => {
       className={`${
         transparent && !mobile
           ? 'transition bg-transparent'
-          : 'transition bg-irodori-primary'
+          : 'transition bg-irodori-primary shadow-up'
       } fixed left-0 w-full sm:bottom-auto px-6 flex z-10`}
     >
       <div className="hidden sm:flex shrink-0 ">
