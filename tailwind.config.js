@@ -6,8 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'irodori-primary': '#F2DDB6',
-        'irodori-secondary': '#F2E6D0',
+        'irodori-primary': '#F2E8C9',
+        'irodori-secondary': '#f0e2b9',
+        'irodori-tertiary': '#b68f3b',
       },
     },
   },
