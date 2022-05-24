@@ -16,13 +16,13 @@ const Kasen = ({ img, children, reverse }: IProps) => (
       layers={[
         {
           image: img,
-          speed: -20,
+          speed: -14,
         },
       ]}
       className="aspect-video bg-cover bg-center flex-1"
     />
     <div className="flex-1">
-      <p className="p-4 lg:p-16">{children}</p>
+      <p className="p-10 sm:p-4 lg:p-16">{children}</p>
     </div>
   </div>
 );
