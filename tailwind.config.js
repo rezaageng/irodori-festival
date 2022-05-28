@@ -14,12 +14,6 @@ module.exports = {
         up: '0 -1px 3px 0 rgb(0 0 0 / 0.1), 0 -1px 2px -1px rgb(0 0 0 / 0.1);',
       },
     },
-    backgroundSize: {
-      auto: 'auto',
-      cover: 'cover',
-      contain: 'contain',
-      banner: '150%',
-    },
   },
   plugins: [],
 };
