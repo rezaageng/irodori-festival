@@ -8,18 +8,18 @@ const Home: NextPage = () => (
     <ParallaxComponent />
     <KasenProlog />
     <Kasen img="/assets/kasen/venti.jpg" reverse>
-      One year, the poet Suikou made his way to Tenshukaku and presented the
+      One year, the poet Suikou made his way to Tenshukaku, and presented the
       Kasen&apos;s work for the Shogun&apos;s perusal, but a page from the works
-      of Aoi no Okina had been torn out, and Suikou was questioned regarding
-      the, suikou pleaded guilty matter, he admitted to drinking at the tavern
-      the night before, and vaguely recalled a mysterious figure approaching.
-      while he was intoxicated
+      of Aoi no Okina had been torn out, and Suikou was questioned regarding the
+      matter, suikou pleaded guilty, he admitted to drinking at the tavern the
+      night before, and vaguely recalled a mysterious figure approaching while
+      he was intoxicated
     </Kasen>
     <Kasen img="/assets/kasen/xq.jpg">
       That figure was none other than Aoi no Okina himself, this turn of events
       had begun with an unnamed individual, under whose coercion Aoi no Okina
-      was forced, to take drastic measures to retrieve a page of poetry, he knew
-      nothing, of this individual&apos;s true intentions, all he knew was that,
+      was forced to take drastic measures to retrieve a page of poetry, he knew
+      nothing of this individual&apos;s true intentions, all he knew was that
       the poem had to do with an old acquaintance, Akahito.
     </Kasen>
     <Kasen img="/assets/kasen/kazuha.jpg" reverse>
