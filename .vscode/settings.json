@@ -1,3 +1,9 @@
 {
-  "conventionalCommits.scopes": ["config", "layout", "navbar", "home"]
+  "conventionalCommits.scopes": [
+    "config",
+    "layout",
+    "navbar",
+    "home",
+    "gallery"
+  ]
 }
