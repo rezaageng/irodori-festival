@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-spring/web": "9.4.5",
+    "axios": "^0.27.2",
     "next": "12.1.5",
     "react": "17",
     "react-dom": "17",
