@@ -17,11 +17,9 @@ const Gallery = () => {
     fetchData();
   }, []);
 
-  return loading ? (
-    <div>loading</div>
-  ) : (
-    <div className="p-4">
-      <ImageGrid img={img} />
+  return (
+    <div className="p-4 sm:mt-14 bg-irodori-primary">
+      {loading ? <div>loading</div> : <ImageGrid img={img} />}
     </div>
   );
 };
