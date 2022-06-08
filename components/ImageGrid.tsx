@@ -7,7 +7,6 @@ interface IProps {
 }
 
 const ImageGrid = ({ img }: IProps) => {
-  const [mouseEnter, setMouseEnter] = useState<boolean>(false);
   const [index, setIndex] = useState<number>(0);
 
   return (
@@ -16,16 +15,14 @@ const ImageGrid = ({ img }: IProps) => {
         <div
           key={item.id}
           id={item.id}
-          className={`bg-white relative p-2 pb-8 cursor-pointer transition duration-300 hover:delay-300 hover:scale-125 ${
-            mouseEnter && i === index ? 'z-10' : 'z-0'
+          className={`bg-white relative p-2 pb-8 cursor-pointer transition duration-300 hover:delay-300 hover:scale-125 hover:drop-shadow-2xl ${
+            i === index ? 'z-10' : 'z-0'
           }`}
           onMouseEnter={() => {
-            setMouseEnter(true);
             setTimeout(() => {
               setIndex(i);
             }, 300);
           }}
-          onMouseLeave={() => setMouseEnter(false)}
         >
           <Image
             src={item.src}
