@@ -73,7 +73,7 @@ const Navbar = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       if (window.scrollY > 10) setZIndex('z-50');
-      if (window.scrollY <= 10) setZIndex('z-10');
+      if (window.scrollY <= 10) setZIndex('z-50 sm:z-10');
     }
   }, [lastScrollY]);
 
