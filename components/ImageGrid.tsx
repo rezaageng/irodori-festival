@@ -1,13 +1,16 @@
+// eslint-disable-next-line object-curly-newline
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { IImages } from '../types/images';
 
 interface IProps {
   img: IImages[];
+  setFullscreen: Dispatch<SetStateAction<boolean>>;
+  setImgIndex: Dispatch<SetStateAction<number | null>>;
 }
 
-const ImageGrid = ({ img }: IProps) => {
+const ImageGrid = ({ img, setFullscreen, setImgIndex }: IProps) => {
   const [index, setIndex] = useState<number>(0);
   const [origin, setOrigin] = useState<string>('');
 
@@ -46,6 +49,11 @@ const ImageGrid = ({ img }: IProps) => {
               setIndex(i);
             }, 300);
           }}
+          onClick={() => {
+            setFullscreen(true);
+            setImgIndex(i);
+          }}
+          aria-hidden="true"
         >
           <Image
             src={item.src}
