@@ -38,8 +38,8 @@ const ImageGrid = ({ img }: IProps) => {
         <div
           key={item.id}
           id={item.id}
-          className={`${origin} bg-white relative p-2 pb-8 cursor-pointer transition duration-300 sm:hover:delay-300 sm:hover:scale-125 sm:hover:drop-shadow-2xl ${
-            i === index ? 'z-20' : 'z-0'
+          className={`bg-white relative p-2 pb-8 cursor-pointer transition duration-300 sm:hover:delay-300 sm:hover:scale-125 sm:hover:drop-shadow-2xl ${
+            i === index ? `z-20 ${origin}` : 'z-0'
           }`}
           onMouseEnter={() => {
             setTimeout(() => {
