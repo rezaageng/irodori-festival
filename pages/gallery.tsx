@@ -6,7 +6,6 @@ import ImageFull from '../components/ImageFull';
 
 const Gallery = () => {
   const [img, setImg] = useState<IImages[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
   const [fullscreen, setFullscreen] = useState<boolean>(false);
   const [imgIndex, setImgIndex] = useState<number | null>(null);
 
@@ -14,7 +13,6 @@ const Gallery = () => {
     const fetchData = async () => {
       const res = await axios.get('/api');
       setImg(res.data);
-      setLoading(false);
     };
 
     fetchData();
@@ -30,15 +28,12 @@ const Gallery = () => {
           setImgIndex={setImgIndex}
         />
       )}
-      {loading ? (
-        <div>loading</div>
-      ) : (
-        <ImageGrid
-          img={img}
-          setFullscreen={setFullscreen}
-          setImgIndex={setImgIndex}
-        />
-      )}
+
+      <ImageGrid
+        img={img}
+        setFullscreen={setFullscreen}
+        setImgIndex={setImgIndex}
+      />
     </div>
   );
 };
