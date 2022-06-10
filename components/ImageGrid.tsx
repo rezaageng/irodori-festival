@@ -56,11 +56,13 @@ const ImageGrid = ({ img, setFullscreen, setImgIndex }: IProps) => {
           aria-hidden="true"
         >
           <Image
+            blurDataURL={item.src}
             src={item.src}
             alt="iradori pics"
             width={1920}
             height={1080}
             objectFit="contain"
+            placeholder="blur"
           />
         </div>
       ))}
