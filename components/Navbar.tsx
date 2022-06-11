@@ -89,7 +89,7 @@ const Navbar = () => {
     >
       <div className="hidden sm:flex shrink-0 ">
         <Image
-          src="/assets/logos/zephyr.png"
+          src="/assets/logo/zephyr.png"
           alt="zephyr"
           width={150}
           height={53}
