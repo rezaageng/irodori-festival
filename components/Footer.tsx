@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 
 const Footer = () => (
-  <footer className="bg-[#A64E46] py-16 px-10 md:px-4 lg:px-10 text-sm 2xl:text-base">
-    <div className="flex flex-col gap-4 lg:gap-10">
+  <footer className="bg-irodori-quaternary py-16 px-10 md:px-4 lg:px-10 text-sm 2xl:text-base">
+    <div className="flex flex-col gap-6">
       <p className="lg:flex-1 lg:self-center lg:text-center">
         This website is not affiliated with HoYoverse.
         <br />
