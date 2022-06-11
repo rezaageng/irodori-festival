@@ -5,6 +5,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import NextNProgress from 'nextjs-progressbar';
 import Layout from '../components/Layout';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <ParallaxProvider>
@@ -12,6 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       <NextNProgress color="#b68f3b" options={{ showSpinner: false }} />
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </Layout>
   </ParallaxProvider>
 );
