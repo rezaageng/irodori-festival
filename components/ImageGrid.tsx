@@ -36,7 +36,7 @@ const ImageGrid = ({ img, setFullscreen, setImgIndex }: IProps) => {
   }, [img, index, isLg, isSm]);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 lg:gap-4 gap-2">
+    <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 lg:gap-4 gap-2 min-h-screen">
       {img.map((item, i) => (
         <div
           key={item.id}
