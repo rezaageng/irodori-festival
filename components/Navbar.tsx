@@ -139,27 +139,6 @@ const Navbar = () => {
             <span className="hidden sm:inline">Gallery</span>
           </div>
         </Link>
-        <Link href="/art-sources" passHref>
-          <div
-            className={`${
-              transparent
-                ? 'sm:hover:bg-irodori-secondary/30'
-                : 'sm:hover:bg-irodori-secondary'
-            } nav-wrapper`}
-          >
-            <Image
-              src={
-                router.pathname === '/art-sources'
-                  ? '/assets/icons/art-active.svg'
-                  : '/assets/icons/art.svg'
-              }
-              alt="art icon"
-              width={24}
-              height={24}
-            />
-            <span className="hidden sm:inline">Art Sources</span>
-          </div>
-        </Link>
       </div>
     </animated.nav>
   );
