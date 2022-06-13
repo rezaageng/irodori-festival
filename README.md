@@ -1,5 +1,3 @@
-![Header](./public/assets/background/irothumb.jpg)
-
 # Irodori Festival 🍁
 
 The Irodori Festival originated from the legend of The Five Kasen who were gifted singers and poetry writers of ancient Inazuma. The Five Kasen brought a cultural revolution to the nation. As a sign of the people's appreciation towards the works of the The Five Kasen, the Irodori Festival was developed.
