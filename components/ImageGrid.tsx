@@ -56,7 +56,7 @@ const ImageGrid = ({ img, setFullscreen, setImgIndex }: IProps) => {
           aria-hidden="true"
         >
           <Image
-            blurDataURL={item.src}
+            blurDataURL="/assets/background/irobg.png"
             src={item.src}
             alt="iradori pics"
             width={1920}
