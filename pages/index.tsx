@@ -1,10 +1,14 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import Kasen from '../components/Kasen';
 import KasenProlog from '../components/KasenProlog';
 import ParallaxComponent from '../components/ParallaxComponent';
 
 const Home: NextPage = () => (
   <>
+    <Head>
+      <title>Home / Irodori Festival</title>
+    </Head>
     <ParallaxComponent />
     <KasenProlog />
     <Kasen img="/assets/kasen/venti.jpg" reverse>
