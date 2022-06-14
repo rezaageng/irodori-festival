@@ -23,6 +23,20 @@ const Gallery = () => {
     <>
       <Head>
         <title>Gallery / Irodori Festival</title>
+        <meta
+          name="description"
+          content="become idiots, dance in midair, and forget about the present"
+        />
+        <meta property="twitter:title" content="a memory" />
+        <meta
+          property="twitter:description"
+          content="become idiots, dance in midair, and forget about the present"
+        />
+        <meta property="og:title" content="a memory" />
+        <meta
+          property="og:description"
+          content="become idiots, dance in midair, and forget about the present"
+        />
       </Head>
       <div className="p-4 sm:mt-14 bg-irodori-primary">
         {fullscreen && (
