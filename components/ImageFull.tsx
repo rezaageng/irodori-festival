@@ -47,11 +47,12 @@ const ImageFull = ({ img, imgIndex, setFullscreen, setImgIndex }: IProps) => {
           onClick={prevImageHandler}
         >
           <Image
+            blurDataURL="/assets/background/irobg.png"
             src="/assets/icons/nav_prev.svg"
             width={24}
             height={24}
             alt="arrow left"
-            lazyBoundary="200px"
+            placeholder="blur"
           />
         </button>
         <button
